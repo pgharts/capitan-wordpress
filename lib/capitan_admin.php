@@ -19,7 +19,7 @@ class CapitanAdmin {
   }
 
   public function enqueueCSS() {
-    wp_enqueue_style('capitanStyle', plugins_url( "/Festivity/lib/css/capitan.css"));
+    wp_enqueue_style('capitanStyle', plugins_url( "/capitan/lib/css/capitan.css"));
   }
 
   public function addCapitanAdminMenu() {
