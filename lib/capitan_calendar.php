@@ -1,6 +1,6 @@
 <?php
 
-class capitanCalendar {
+class CapitanCalendar {
 
 
   private $calendar_url;
