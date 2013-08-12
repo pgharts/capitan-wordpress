@@ -34,7 +34,6 @@ class Capitan {
     require_once "lib/capitan_autoloader.php";
     add_action('admin_menu', array('CapitanAdmin', 'addCapitanAdminMenu'));
     add_action('admin_init', array('CapitanAdmin', 'registerCapitanSettings'));
-    //require_once 'lib/jorogumo_functions.php';
     add_action('init', array(__CLASS__, 'enqueueScripts'));
     //add_action( 'widgets_init', create_function( '', 'register_widget( "jorogumo_widget" );' ) );
   }
@@ -44,8 +43,8 @@ class Capitan {
   }
 
   public static function enqueueCSS() {
-    wp_enqueue_style('capitanStyle', plugins_url( "/Capitan/lib/css/capitan.css"));
-    wp_enqueue_style('capitanBootstrap', plugins_url( "/Capitan/lib/css/capitan.css"));
+    //wp_enqueue_style('capitanStyle', plugins_url( "/capitan-wordpress/lib/css/capitan.css"));
+    //wp_enqueue_style('capitanBootstrap', plugins_url( "/capitan-wordpress/lib/css/capitan.css"));
   }
 
 }

@@ -1,10 +1,10 @@
 <?php
   // Hack:
-  define('AUTOLOADER_INCLUDE_ROOT', realpath(ABSPATH . "/wp-content/plugins/capitan-wordpress/"));
+  define('CAPTAIN_AUTOLOADER_INCLUDE_ROOT', realpath(ABSPATH . "/wp-content/plugins/capitan/"));
 
   /**
    * This is an autoloader.  It will load things automatically.  Specifically, it'll find classes
-   * saved in the lib directory of the Festivity plugin and load them. This code was stolen with
+   * saved in the lib directory of the Capitan plugin and load them. This code was stolen with
    * permission from Brennen Bearnes.
    */
   class CapitanAutoloader {
@@ -21,7 +21,7 @@
       $name = str_replace('\\', DIRECTORY_SEPARATOR, $name);
       $path = "lib/{$name}.php";
 
-      $full_path = AUTOLOADER_INCLUDE_ROOT . '/' . $path;
+      $full_path = CAPTAIN_AUTOLOADER_INCLUDE_ROOT . '/' . $path;
       if (is_file($full_path)) include $full_path;
     }
   }

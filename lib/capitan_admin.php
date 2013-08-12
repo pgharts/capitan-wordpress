@@ -23,7 +23,7 @@ class CapitanAdmin {
   }
 
   public function addCapitanAdminMenu() {
-    add_menu_page( 'Capitan', 'Capitan', 'manage_options', 'capitan', array('CapitanAdmin', 'capitanOptions'), NULL);
+    add_submenu_page( 'options-general.php', 'Capitan', 'Capitan', 'manage_options', 'capitan', array('CapitanAdmin', 'capitanOptions'), NULL);
   }
 
   private function savecapitanOptions(){
