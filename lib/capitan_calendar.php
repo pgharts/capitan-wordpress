@@ -18,7 +18,7 @@ class CapitanCalendar {
   private function processResponse($response) {
     $this->month = $response->month;
     $this->year = $response->year;
-    $this->weeks = processWeeks($response->weeks);
+    $this->weeks = $this->processWeeks($response->weeks);
   }
 
   private function processWeeks($json_weeks) {

@@ -4,12 +4,13 @@ class CapitanConnection {
 
   public static function getResponse($url) {
     $base_url = CapitanConnection::baseUrl();
+    $url_format = "%s/capi/%s?api_key=%s";
 
 
     $defaults = array(
         CURLOPT_POST => 0,
         CURLOPT_HEADER => 0,
-        CURLOPT_URL => $url,
+        CURLOPT_URL => sprintf($url_format, $base_url, $url, CapitanConnection::apiKey()),
         CURLOPT_FRESH_CONNECT => 1,
         CURLOPT_RETURNTRANSFER => 1,
         CURLOPT_FORBID_REUSE => 1,

@@ -35,7 +35,8 @@ class Capitan {
     add_action('admin_menu', array('CapitanAdmin', 'addCapitanAdminMenu'));
     add_action('admin_init', array('CapitanAdmin', 'registerCapitanSettings'));
     add_action('init', array(__CLASS__, 'enqueueScripts'));
-    //add_action( 'widgets_init', create_function( '', 'register_widget( "jorogumo_widget" );' ) );
+    require_once 'lib/capitan_shortcode.php';
+    //add_action( 'widgets_init', create_function( '', 'register_widget( "capitan_widget" );' ) );
   }
 
   function enqueueScripts() {
