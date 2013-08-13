@@ -19,7 +19,7 @@
       <th scope="col">S</th>
     </thead>
     <tbody>
-      <?php foreach($calendar->weeks as $week) { ?>
+      <?php foreach($capitan_calendar->weeks as $week) { ?>
         <tr>
           <?php foreach($week->days as $day) {
             if($day->day->month != strtotime($calendar->month, "%B")) { ?>
