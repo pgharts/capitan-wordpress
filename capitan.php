@@ -32,14 +32,19 @@ class Capitan {
   // set up the initialization hooks for the plugin
   function __construct() {
     require_once "lib/capitan_autoloader.php";
+    require_once 'lib/capitan_shortcode.php';
+    require_once 'lib/capitan_ajax.php';
     add_action('admin_menu', array('CapitanAdmin', 'addCapitanAdminMenu'));
     add_action('admin_init', array('CapitanAdmin', 'registerCapitanSettings'));
-    add_action('init', array(__CLASS__, 'enqueueScripts'));
-    require_once 'lib/capitan_shortcode.php';
+    add_action('init', array(__CLASS__, 'enqueueStyles'));
+    add_action('wp_enqueue_scripts', 'enqueueJavascripts');
     //add_action( 'widgets_init', create_function( '', 'register_widget( "capitan_widget" );' ) );
   }
 
-  function enqueueScripts() {
+  function enqueueJavascripts() {
+    wp_enqueue_script('capitan_widget', plugins_url('/capitan/lib/js/capitan_widget.js') );
+  }
+  function enqueueStyles() {
     add_action('wp_print_styles', array(__CLASS__, 'enqueueCSS'));
   }
 
