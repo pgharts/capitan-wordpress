@@ -6,7 +6,7 @@ class CapitanDay {
 
   function __construct($day) {
     $this->day = strtotime($day->day);
-    $this->shows = processShows($day->shows);
+    $this->shows = $this->processShows($day->shows);
   }
 
   private function processShows($json_shows) {

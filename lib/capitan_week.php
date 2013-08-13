@@ -12,7 +12,7 @@ class CapitanWeek {
   private function processDays($json_days) {
     $days = array();
     foreach($json_days as $day) {
-      array_push($days, new CapitanWeek($day));
+      array_push($days, new CapitanDay($day));
     }
     return $days;
   }
