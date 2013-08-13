@@ -1,44 +1,112 @@
-#fest_sort_filter_controls {
-  background-color: #F1F1F1;
-  font-size: 12px;
-  float:left;
-  margin-bottom: 10px;
-  width: 100%;
-}
+/* Events Calendar Styles
+----------------------------------------------- */
 
-.fest_filters {
-  width: 100%;
-}
+.events-calendar {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing:0;
+	text-align: center;
+	color: #fff;
+	margin:0 0 10px;
+	}
+.events-calendar th, .events-calendar td {
+	margin:0;
+	padding:0;
+	}
 
-.fest_filters, .fest_filter_sort {
-  float: left;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-top: 5px;
-  clear: left;
-}
-.fest_filter, .fest_filter_label {
-  float: left;
-}
+.events-calendar caption {
+	font-size: 11px;
+	padding: 3px 0 6px;
+	color: #d4dde6;
+	text-transform: uppercase;
+	font-weight: bold;
+	}
+	.events-calendar caption [rel="prev"] {
+		float:left;
+		margin-left: 6px;
+		}
+	.events-calendar caption [rel="next"] {
+		float: right;
+		margin-right: 6px;
+		}
+	.events-calendar caption a:link {
+		text-decoration: none;
+		color: #fff;
+		padding: 0 3px;
+		}
+	.events-calendar caption a:hover {
+		background: rgba(255,255,255,.3);
+		}
 
-select.fest_filter  {
-  clear: left;
-  min-width: 180px;
-}
+	.events-calendar thead th {
+		font-size: 10px;
+		padding: 3px 0;
+		text-align: center;
+		}
 
-div.fest_filter {
-  width: 200px;
-}
-.fest_clear_filters {
-  float: right;
-  clear: left;
-  padding: 5px;
-}
+	.events-calendar tbody {
+		color: #fff;
+		text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+		font-size: 11px;
+		}
+		.events-calendar tbody td {
+			border: 1px solid rgba(255,255,255,.1);
+			color: rgba(255,255,255,.6);
+			text-align: center;
+			}
+		.events-calendar tbody a {
+			display: block;
+			text-decoration: none;
+			color: #fff;
+			background-color: rgba(255,255,255,.15);
+			font-weight: bold;
+			}
+		.events-calendar tbody .null { color: rgba(255,255,255,.2); }
+		.events-calendar tbody td>a:hover {
+			background-color: rgba(255,255,255,.3);
+			}
 
-#primary #content {
-  width: 100%;
-}
+	.popup {
+		position: absolute;
+		background: #ffc;
+		color: #555;
+		width: 200px;
+		padding: 0;
+		text-align: left;
+		z-index:9999;
+		-moz-box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+		}
 
-.fest_hidden {
-  display: none;
-}
+		.popup h5 {
+			background: #e79334;
+			color: #fff;
+			font-size:12px;
+			font-weight:bold;
+			line-height:14px;
+			text-transform:none;
+			text-shadow:none;
+			padding:6px 10px;
+			margin:0;
+			}
+
+			.popup ul{
+				margin:0;
+				list-style:none;
+				}
+			.popup li {
+				background:#f6f2d6;
+				color:#494949;
+				font-size:11px;
+				line-height:15px;
+				text-shadow:none;
+				padding:6px 10px;
+				margin:0;
+				border-bottom:1px solid #eee2a9;
+				}
+				.popup li a{
+					color:#494949;
+					font-weight:normal;
+					}
+			.popup li:last-child{ border:none; }
+			.popup li:hover{ background:#fff; }
+

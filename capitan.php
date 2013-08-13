@@ -44,8 +44,7 @@ class Capitan {
   }
 
   public static function enqueueCSS() {
-    //wp_enqueue_style('capitanStyle', plugins_url( "/capitan-wordpress/lib/css/capitan.css"));
-    //wp_enqueue_style('capitanBootstrap', plugins_url( "/capitan-wordpress/lib/css/capitan.css"));
+    wp_enqueue_style('capitanStyle', plugins_url( "/capitan/lib/css/capitan.css"));
   }
 
 }

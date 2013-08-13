@@ -22,16 +22,16 @@
       <?php foreach($capitan_calendar->weeks as $week) { ?>
         <tr>
           <?php foreach($week->days as $day) {
-            if($day->day->month != strtotime($calendar->month, "%B")) { ?>
+            if(strftime("%B", $day->day) != $capitan_calendar->month) { ?>
               <td class="null">
                 <?php echo($day->day->day) ?>
               </td>
             <?php } else { ?>
               <td>
                 <?php if(count($day->shows) > 0) { ?>
-                  <a href="#"><?php echo($day->day->day); ?></a>
+                  <a href="#"><?php echo(strftime("%e", $day->day)); ?></a>
                   <div class="popup">
-                    <h5><?php echo(strftime($day->day,"%B %d, %Y"));?></h5>
+                    <h5><?php echo(strftime("%B %d, %Y", $day->day));?></h5>
                     <ul>
                       <?php foreach($day->shows as $show) { ?>
                         <li>
@@ -40,7 +40,7 @@
                       <?php } ?>
                     </ul>
                   </div>
-                <?php } else { echo($day->day->day); } ?>
+                <?php } else { echo(strftime("%e", $day->day)); } ?>
               </td>
             <?php } ?>
 
