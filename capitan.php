@@ -36,15 +36,16 @@ class Capitan {
     require_once 'lib/capitan_ajax.php';
     add_action('admin_menu', array('CapitanAdmin', 'addCapitanAdminMenu'));
     add_action('admin_init', array('CapitanAdmin', 'registerCapitanSettings'));
-    add_action('init', array(__CLASS__, 'enqueueStyles'));
-    add_action('wp_enqueue_scripts', 'enqueueJavascripts');
+    add_action('init', array(__CLASS__, 'enqueueStylesAndScripts'));
+    add_action('wp_enqueue_scripts', array(__CLASS__, 'enqueueJavascripts'));
     //add_action( 'widgets_init', create_function( '', 'register_widget( "capitan_widget" );' ) );
   }
 
   function enqueueJavascripts() {
-    wp_enqueue_script('capitan_widget', plugins_url('/capitan/lib/js/capitan_widget.js') );
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('capitan_widget', plugins_url('/capitan/lib/js/calendar_widget.js') );
   }
-  function enqueueStyles() {
+  function enqueueStylesAndScripts() {
     add_action('wp_print_styles', array(__CLASS__, 'enqueueCSS'));
   }
 
