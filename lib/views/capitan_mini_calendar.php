@@ -2,7 +2,15 @@
 
 <form action="none" class = "select-month" method ="post">
     <select id="month_select">
-      = select_tag 'month_select', options_for_select(month_select_options)
+      <?php
+      $option_format = '<option value="%s">%s</option>';
+      $interval_format = 'P%sM';
+      $month_calc = new DateTime("now");
+      for($i = 0; $i<12 ; $i++) {
+        $month_calc->add(new DateInterval(sprintf($interval_format, $i)));
+        echo(sprintf($option_format, $month_calc->format('m'), $month_calc->format('M')));
+      }
+      ?>
     </select>
   </form>
   <span class="calnav"></span>
