@@ -6,7 +6,6 @@
 	border-collapse: collapse;
 	border-spacing:0;
 	text-align: center;
-	color: #fff;
 	margin:0 0 10px;
 	}
 .events-calendar th, .events-calendar td {
@@ -31,7 +30,6 @@
 		}
 	.events-calendar caption a:link {
 		text-decoration: none;
-		color: #fff;
 		padding: 0 3px;
 		}
 	.events-calendar caption a:hover {
@@ -45,19 +43,15 @@
 		}
 
 	.events-calendar tbody {
-		color: #fff;
-		text-shadow: 1px 1px 1px rgba(0,0,0,.2);
 		font-size: 11px;
 		}
 		.events-calendar tbody td {
 			border: 1px solid rgba(255,255,255,.1);
-			color: rgba(255,255,255,.6);
 			text-align: center;
 			}
 		.events-calendar tbody a {
 			display: block;
 			text-decoration: none;
-			color: #fff;
 			background-color: rgba(255,255,255,.15);
 			font-weight: bold;
 			}
@@ -68,17 +62,18 @@
 
 	.popup {
 		position: absolute;
-		background: #ffc;
+		background: #f6f6f6;
 		color: #555;
 		width: 200px;
 		padding: 0;
 		text-align: left;
 		z-index:9999;
+    border:1px solid #494949;
 		-moz-box-shadow: 2px 2px 2px rgba(0,0,0,.3);
 		}
 
 		.popup h5 {
-			background: #e79334;
+			background: #494949;
 			color: #fff;
 			font-size:12px;
 			font-weight:bold;
@@ -94,14 +89,14 @@
 				list-style:none;
 				}
 			.popup li {
-				background:#f6f2d6;
+				background:#f6f6f6;
 				color:#494949;
 				font-size:11px;
 				line-height:15px;
 				text-shadow:none;
 				padding:6px 10px;
 				margin:0;
-				border-bottom:1px solid #eee2a9;
+				border-bottom:1px solid #494949;
 				}
 				.popup li a{
 					color:#494949;
