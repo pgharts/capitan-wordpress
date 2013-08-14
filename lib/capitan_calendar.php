@@ -11,7 +11,7 @@ class CapitanCalendar {
     // The URL format is: calendar/monthly/[year]/[month]/
     $base_calendar_url = "calendar/monthly/%s/%s";
     $this->calendar_url = sprintf($base_calendar_url, $year, $month);
-    $this->calendar_response = CapitanConnection::getResponse($this->calendar_url);
+    $this->calendar_response = CapitanConnection::getResponse($this->calendar_url, sprintf("calendar-%s-%s", $year, $month));
     $this->processResponse($this->calendar_response);
   }
 
