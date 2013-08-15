@@ -39,7 +39,7 @@ class Capitan {
     add_action('admin_init', array('CapitanAdmin', 'registerCapitanSettings'));
     add_action('init', array(__CLASS__, 'enqueueStylesAndScripts'));
     add_action('wp_enqueue_scripts', array(__CLASS__, 'enqueueJavascripts'));
-    //add_action( 'widgets_init', create_function( '', 'register_widget( "capitan_widget" );' ) );
+    add_action( 'widgets_init', create_function( '', 'register_widget( "Capitan_Calendar_Widget" );' ) );
   }
 
   function enqueueJavascripts() {
