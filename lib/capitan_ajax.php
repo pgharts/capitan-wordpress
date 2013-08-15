@@ -1,5 +1,4 @@
 <?php
-add_action('wp_ajax_nopriv_get_,mini_calendar', 'get_mini_calendar');
 
 function get_mini_calendar() {
 	global $wpdb; // this is how you get access to the database
@@ -13,4 +12,8 @@ function get_mini_calendar() {
 
 	die(); // this is required to return a proper result
 }
+
+add_action('wp_ajax_get_mini_calendar', 'get_mini_calendar');
+add_action('wp_ajax_nopriv_get_mini_calendar', 'get_mini_calendar');
+
 ?>

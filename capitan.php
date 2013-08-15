@@ -34,6 +34,7 @@ class Capitan {
     require_once "lib/capitan_autoloader.php";
     require_once 'lib/capitan_shortcode.php';
     require_once 'lib/capitan_ajax.php';
+
     add_action('admin_menu', array('CapitanAdmin', 'addCapitanAdminMenu'));
     add_action('admin_init', array('CapitanAdmin', 'registerCapitanSettings'));
     add_action('init', array(__CLASS__, 'enqueueStylesAndScripts'));

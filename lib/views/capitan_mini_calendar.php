@@ -1,19 +1,4 @@
-<div class = "eventcal group">
-
-<form action="none" class = "select-month" method ="post">
-    <select id="month_select">
-      <?php
-      $option_format = '<option value="%s">%s</option>';
-      $interval_format = 'P%sM';
-      $month_calc = new DateTime("now");
-      for($i = 0; $i<12 ; $i++) {
-        $month_calc->add(new DateInterval(sprintf($interval_format, $i)));
-        echo(sprintf($option_format, $month_calc->format('m'), $month_calc->format('M')));
-      }
-      ?>
-    </select>
-  </form>
-  <span class="calnav"></span>
+<span class="calnav"></span>
   <input type="hidden" name="current_calendar_month" value="<?php ?>" />
   <input type="hidden" name="current_calendar_year" value="<?php ?>" />
   <table class="events-calendar" cellspacing="0">
@@ -58,5 +43,3 @@
       <?php } ?>
     </tbody>
   </table>
-
-</div>
