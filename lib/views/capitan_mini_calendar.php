@@ -23,7 +23,7 @@
               <td>
                 <?php if(count($day->shows) > 0) { ?>
                   <a href="#"><?php echo(strftime("%e", $day->day)); ?></a>
-                  <div class="popup">
+                  <div class="popup hidden">
                     <h5><?php echo(strftime("%B %d, %Y", $day->day));?></h5>
                     <ul>
                       <?php foreach($day->shows as $show) { ?>

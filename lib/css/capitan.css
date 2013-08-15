@@ -1,6 +1,9 @@
 /* Events Calendar Styles
 ----------------------------------------------- */
 
+.hidden {
+  display: none;
+}
 .events-calendar {
 	width: 100%;
 	border-collapse: collapse;
